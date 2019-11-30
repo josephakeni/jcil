@@ -1,0 +1,23 @@
+{
+  "name": "jotonialogistics",
+  "version": "1.0.0",
+  "description": "Jotonia Logistics Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephakeni/jcil.git"
+  },
+  "author": "Joseph Akeni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephakeni/jcil/issues"
+  },
+  "homepage": "https://github.com/josephakeni/jcil#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  }
+}
