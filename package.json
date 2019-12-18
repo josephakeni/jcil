@@ -4,7 +4,8 @@
   "description": "Jotonia Logistics Application",
   "main": "app.js",
   "scripts": {
-    "test": "node app"
+    "test": "node app.js",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/josephakeni/jcil#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
