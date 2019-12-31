@@ -1,10 +1,11 @@
 const express = require('express');
 const http = require('http')
 const path = require('path');
-const MongoClient = require('mongodb').MongoClient;
+//const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 
 // Mine
+const frontendRoutes = require('./routes/frontend');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 // Init App
@@ -13,6 +14,8 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Add Middleware
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(frontendRoutes);
 app.use('/admin', adminRoutes);
 
 app.use(shopRoutes);
