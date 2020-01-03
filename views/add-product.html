@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+
     <title>Add Product</title>
 </head>
 <body>
@@ -19,8 +21,218 @@
 
     <main>
         <form action="/add-product" method="POST">
+            <h3>KINDLY FILL IN THE FORM</h3>
+            <!--SENDER INFO-->
+            <h5>SENDER'S INFORMATION</h5>
+            <div class="item">
+                <p>Name</p>
+                <div class="name-item">
+                  <input type="text" name="name" placeholder="First" />
+                  <input type="text" name="name" placeholder="Last" />
+                </div>
+              </div>
+              <div class="item">
+                <p>Email</p>
+                <input type="text" name="name"/>
+              </div>
+              <div class="item">
+                <p>Phone</p>
+                <input type="text" name="name"/>
+              </div>
+              <!--RECEIVER INFO-->
+            <h5>RECEIVER'S INFORMATION</h5>
+            <div class="item">
+                <p>Name</p>
+                <div class="name-item">
+                  <input type="text" name="name" placeholder="First" />
+                  <input type="text" name="name" placeholder="Last" />
+                </div>
+              </div>
+              <div class="item">
+                <p>Email</p>
+                <input type="text" name="name"/>
+              </div>
+              <div class="item">
+                <p>Phone</p>
+                <input type="text" name="name"/>
+              </div>
+              <!--PICK-UP AND DELIVERY INFORMATION-->
+              <h5>PICK-UP AND DELIVERY INFORMATION</h5>
+              <div class="item">
+                <p>Pick Up Date</p>
+                <input type="date" name="bdate" />
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="item">
+                <p>Pick Up Time</p>
+                <input type="time" name="name" />
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="item">
+                <p>Pick-up Address</p>
+                <input type="text" name="name" placeholder="Street address" />
+                <input type="text" name="name" placeholder="Street address line 2" />
+                <div class="city-item">
+                  <input type="text" name="name" placeholder="City" />
+                  <input type="text" name="name" placeholder="Region" />
+                  <input type="text" name="name" placeholder="Postal / Zip code" />
+                  <select>
+                    <option value="">State</option>
+                    <option value="1">Lagos</option>
+                    <!-- <option value="2">Germany</option>
+                    <option value="3">France</option>
+                    <option value="4">Armenia</option>
+                    <option value="5">USA</option> -->
+                  </select>
+                </div>
+              </div>
+              <div class="item">
+                <p>Notes</p>
+                <textarea rows="3"></textarea>
+              </div>
+              <div class="item">
+                <p>Delivery Address</p>
+                <input type="text" name="name" placeholder="Street address" />
+                <input type="text" name="name" placeholder="Street address line 2" />
+                <div class="city-item">
+                  <input type="text" name="name" placeholder="City" />
+                  <input type="text" name="name" placeholder="Region" />
+                  <input type="text" name="name" placeholder="Postal / Zip code" />
+                  <select>
+                    <option value="">State</option>
+                    <option value="1">Lagos</option>
+                    <!-- <option value="2">Germany</option>
+                    <option value="3">France</option>
+                    <option value="4">Armenia</option>
+                    <option value="5">USA</option> -->
+                  </select>
+                </div>
+              </div>
+              <div class="item">
+                <p>Notes</p>
+                <textarea rows="3"></textarea>
+              </div>
+              <!-- <div class="item">
+                <p>Number of Passengers</p>
+                <input type="text" name="name"/>
+              </div> -->
+              
+              <!-- <div class="question">
+                <p>Vehicle</p>
+                <div class="question-answer">
+                  <div>
+                    <input type="radio" value="none" id="radio_1" name="vehicle" />
+                    <label for="radio_1" class="radio"><span>Limousine (8-12 person)</span></label>
+                  </div>
+                  <div>
+                    <input type="radio" value="none" id="radio_2" name="vehicle" />
+                    <label for="radio_2" class="radio"><span>SUV (6-7 person)</span></label>
+                  </div>
+                  <div>
+                    <input type="radio" value="none" id="radio_3" name="vehicle" />
+                    <label for="radio_3" class="radio"><span>Van (12-15 person)</span></label>
+                  </div>
+                  <div>
+                    <input type="radio" value="none" id="radio_4" name="vehicle" />
+                    <label for="radio_4" class="radio"><span>Bus (50+ person)</span></label>
+                  </div>
+                  <div>
+                    <input type="radio" value="none" id="radio_5" name="vehicle" />
+                    <label for="radio_5" class="radio other"><span>other:</span></label>
+                    <input class="other" type="text" name="name" />
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <p>Pick Up Date</p>
+                <input type="date" name="bdate" />
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="item">
+                <p>Pick Up Time</p>
+                <input type="time" name="name" />
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="item">
+                <p>If pick up from the airport, please enter airport name</p>
+                <input type="text" name="name"/>
+              </div>
+              <div class="item">
+                <p>Flight Number</p>
+                <input type="text" name="name"/>
+              </div>
+              <div class="item">
+                <p>Pick Up Point</p>
+                <input type="text" name="name" placeholder="Street address" />
+                <input type="text" name="name" placeholder="Street address line 2" />
+                <div class="city-item">
+                  <input type="text" name="name" placeholder="City" />
+                  <input type="text" name="name" placeholder="Region" />
+                  <input type="text" name="name" placeholder="Postal / Zip code" />
+                  <select>
+                    <option value="">Country</option>
+                    <option value="1">Russia</option>
+                    <option value="2">Germany</option>
+                 <option value="3">France</option>
+                    <option value="4">Armenia</option>
+                    <option value="5">USA</option>
+                  </select>
+                </div>
+              </div>
+              <div class="item">
+                <p>Destination</p>
+                <input type="text" name="name" placeholder="Street address" />
+                <input type="text" name="name" placeholder="Street address line 2" />
+                <div class="city-item">
+                  <input type="text" name="name" placeholder="City" />
+                  <input type="text" name="name" placeholder="Region" />
+                  <input type="text" name="name" placeholder="Postal / Zip code" />
+                  <select>
+                    <option value="">Country</option>
+                    <option value="1">Russia</option>
+                    <option value="2">Germany</option>
+                    <option value="3">France</option>
+                    <option value="4">Armenia</option>
+                    <option value="5">USA</option>
+                  </select>
+                </div>
+              </div>
+              <div class="item">
+                <p>Notes</p>
+                <textarea rows="3"></textarea>
+              </div> -->
+               <!--SENDER INFO-->
+            <h5>PACKAGE INFORMATION</h5>
+            <div class="item">
+                <p>Package Information</p>
+                <div class="name-item">
+                  <input type="text" name="name" placeholder="Package Information" />
+                </div>
+              </div>
+              <div class="item">
+                <p>Number of Pieces</p>
+                <input type="text" name="number-of-Pieces"/>
+              </div>
+              <div class="item">
+                <p>Weight</p>
+                <input type="text" name="weight"/>
+              </div>
+              <div class="item">
+                <p>Dimensions</p>
+                <input type="text" name="dimensions"/>
+              </div>
+              <div class="item">
+                <p>Special Instructions</p>
+                <textarea rows="3"></textarea>
+              </div>
+              <div class="btn-block">
+                <button type="submit" href="/">SEND</button>
+              </div>
+
+              <!-- <div>
             <input type="text" name="title">
             <button type="submit">Add Product</button>
+              </div> -->
         </form>
     </main>
 </body>
